@@ -1,9 +1,9 @@
 =simple_form_for(@job,html:{class: 'form_horizontal'})do |f|
-  =f.collection_select :category_id, Category.all, :id, :name, {prompt:"Choose your Category"}
-  =f.input :title, label: "Job Title"
-  =f.input :description, label: "Job Description"
-  =f.input :company, label: "Your Company"
-  =f.input :url, label: "Link To"
+  =f.collection_select :category_id, Category.all, :id, :name, {prompt:"Choose your Category"}, input_html: {class: "dropdown-toggle"}
+  =f.input :title, label: "Job Title",input_html: {class: "form_control"}
+  =f.input :description, label: "Job Description",input_html: {class: "form_control"}
+  =f.input :company, label: "Your Company",input_html: {class: "form_control"}
+  =f.input :url, label: "Link To",input_html: {class: "form_control"}
   %br/
   =f.button :submit
   
